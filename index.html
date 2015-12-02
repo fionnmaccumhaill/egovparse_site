@@ -1,11 +1,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml" >
 <head>
-    <title>My Website Home Page</title>
+    <title>OpenData</title>
+<link href="css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <h1>Welcome to my website</h1>
-  <p>Now hosted on Amazon S3!</p>
   
+  <h1>Open Data</h1>
+  <p></p>
+  
+<div class="box1">Content for New div Tag Goes Here</div>
+
 <div id="dmessage">
 </div>
   
@@ -13,11 +17,12 @@
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="js/egovparse.js"></script>
 <script>
+    var idxLoaded = false;
+    var idxFile = null;
 	$(document).ready(function () {
-		$('#dmessage').append("<p>Inside document ready</p>");
-		var indexJson = getDataIndex();
-		// alert("after getDataIndex()" + indexJson.length);
-		// $('#dmessage').append("<p>Size of index:" +  "</p>");
+		$('#dmessage').append("<p>Inside document ready - most likely</p>");
+		// if(!idxLoaded) alert ("Not loaded yet");
+		getDataIndex();
 	});
 </script>
 

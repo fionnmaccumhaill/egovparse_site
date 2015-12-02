@@ -1,0 +1,33 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+
+/* Desktop view*/
+@media (min-width : 668px ){
+.box1 {
+	color: #961E20;
+	font-size: 0.8em;
+}
+
+}
+
+
+/* Tablet view */
+@media ( min-width : 375px ) and (max-width : 667px ){
+.box1 {
+	background-color: #24C6E3;
+	color: #FFFBFB;
+}
+
+}
+
+
+/* Mobile device view */
+@media (max-width: 374px){
+.box1 {
+	background-color: #000000;
+	color: #F7F2F2;
+}
+
+}
