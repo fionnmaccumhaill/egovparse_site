@@ -2,27 +2,55 @@
 <head>
     <title>OpenData</title>
 <link href="css/main.css" rel="stylesheet" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
   
-  <h1>Open Data</h1>
+  <h1 class="hdrclass">Open Data</h1>
   <p></p>
   
-<div class="box1">Content for New div Tag Goes Here</div>
+<div class="box1">
+  <p>
+    <label>Town:</label>
+    <select name="select" id="townselect">
+    <option value="noselect">Select Town</option>
+    </select>
+  </p>
+  
+  <p>&nbsp;</p>
+</div>
 
+<div id="dfilter">
+    <div id="dtown"> </div>
+</div>
+<div id="ddatasets">
+  <table>
+    <div id="ddatarows">
+    </div>
+  </table>
+</div>
 <div id="dmessage">
 </div>
   
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 <script type="text/javascript" src="js/egovparse.js"></script>
 <script>
     var idxLoaded = false;
+	var tcLoaded = false;
+	var townLoaded = false;
     var idxFile = null;
+	var tcFile = null;
+	var townFile = null;
+	var filterTown = null;
 	$(document).ready(function () {
-		$('#dmessage').append("<p>Inside document ready - most likely</p>");
-		// if(!idxLoaded) alert ("Not loaded yet");
+	//	$('#dmessage').append("<p>Inside document ready</p>");
 		getDataIndex();
+		getTowns();
+		$('#townselect').on('change', function() {
+			onChangeTown($(this).val());
+		});
 	});
 </script>
 

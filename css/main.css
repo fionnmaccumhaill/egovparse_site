@@ -4,11 +4,11 @@
 
 
 /* Desktop view*/
-@media (min-width : 668px ){
+@media (min-width : 668px ) {
 .box1 {
 	color: #961E20;
 	font-size: 0.8em;
-}
+  }
 
 }
 
@@ -31,3 +31,19 @@
 }
 
 }
+.hdrclass {
+	text-align: center;
+}
+
+#townselect{
+   height:20px;
+   background:white;
+}
+
+p {
+	line-height: 50%;
+}
+
+table, th, tr, td {
+	border: 1px solid black;
+}	
